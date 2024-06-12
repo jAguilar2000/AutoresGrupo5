@@ -5,16 +5,16 @@
              Title="Autor">
     <VerticalStackLayout>
         <Image 
-             Source="{Binding Persona.Foto}" 
+             Source="{Binding Autor.Foto}" 
              HeightRequest="200" 
              WidthRequest="200"
              Margin="20,5,20,5"
              BackgroundColor="Azure"
              HorizontalOptions="CenterAndExpand"
              VerticalOptions="CenterAndExpand"
-             x:Name="FotoImage"/>   
+             x:Name="FotoImage"/>
 
-        <Button Text="Tomar Imagen" Margin="20,0,20,0" x:Name="btnfoto" Clicked="btnfoto_Clicked"></Button>
+        <Button Text="Tomar Foto" Margin="20,0,20,0" x:Name="BtnFoto" Clicked="BtnFoto_Clicked"></Button>
 
         <Label 
             Text="Nombres"
@@ -22,24 +22,28 @@
             HorizontalOptions="Start" 
             Margin="20,0,20,0"/>
         <Entry 
-            Text="{Binding Persona.Nombres}" 
+            Text="{Binding Autor.Nombres}" 
             MaxLength="100"
             x:Name="Nombres" 
             Keyboard="Text" 
             Margin="20,5,20,5"/>
 
-        
-
         <Label 
-    Text="Telefono"
-    VerticalOptions="Start" 
-    HorizontalOptions="Start" 
-    Margin="20,0,20,0"/>
-        <Entry 
-        Text="{Binding Persona.Telefono}" 
-        x:Name="Telefono" 
-        Margin="20,5,20,5"/>
-
-        <Button x:Name="btnaceptar" Margin="20,0,20,0" Text="Aceptar" Background="BlueViolet" TextColor="White" Clicked="btnaceptar_Clicked"/>
+            Text="Pais"
+            VerticalOptions="Start" 
+            HorizontalOptions="Start" 
+            Margin="20,0,20,0"/>
+        <Picker
+            SelectedItem="{Binding Autor.Pais}"
+            x:Name="PickerPaises"
+            Title="Seleccione Pais"
+            Margin="20,5,20,5"
+            >
+        </Picker>
+        <Button x:Name="BtnAgregarPais" Margin="20,0,20,5" Clicked="BtnAgregarPais_Clicked" WidthRequest="50" Text="+"/>
+        
+        
+        
+        <Button x:Name="BtnAceptar" Margin="20,0,20,0" Text="Aceptar" Background="BlueViolet" TextColor="White" Clicked="BtnAceptar_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>
