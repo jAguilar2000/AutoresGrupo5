@@ -13,8 +13,9 @@ public partial class PageAutorList : ContentPage
 		Navigation.PushAsync(page);
     }
 
-    private void listAutor_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    private async void listAutor_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
+        //var filtro = await App.DataBaseAutor.GetListAutor().Result.Where(async x => x.Nombres.ToLower().Contains(e.PreviousSelection))
 
     }
 
@@ -23,5 +24,11 @@ public partial class PageAutorList : ContentPage
         base.OnAppearing();
 
         listAutor.ItemsSource = await App.DataBaseAutor.GetListAutor();
+    }
+
+    private async void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
+    {
+        //listAutor.ItemsSource = await App.DataBaseAutor.GetListAutor().Result.Where(x => x.Nombres.ToLower().Contains(e.NewTextValue.ToLower())).ToList();
+
     }
 }
