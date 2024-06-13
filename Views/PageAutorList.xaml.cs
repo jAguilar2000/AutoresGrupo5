@@ -28,7 +28,9 @@ public partial class PageAutorList : ContentPage
 
     private async void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
     {
-        //listAutor.ItemsSource = await App.DataBaseAutor.GetListAutor().Result.Where(x => x.Nombres.ToLower().Contains(e.NewTextValue.ToLower())).ToList();
+        string searchText = e.NewTextValue.ToLower();
+
+        listAutor.ItemsSource = await App.DataBaseAutor.GetListAutorBuscar(searchText);
 
     }
 }

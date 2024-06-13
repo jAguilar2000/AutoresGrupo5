@@ -37,6 +37,11 @@ namespace AutoresGrupo5.Controllers
             return await _connection.Table<Autor>().ToListAsync();
         }
 
+        public async Task<List<Autor>> GetListAutorBuscar(string searchText)
+        {
+            return await _connection.Table<Autor>().Where(a => a.Nombres.ToLower().Contains(searchText) || a.Pais.ToLower().Contains(searchText)).ToListAsync();
+        }
+
         public async Task<Autor> GetAutor(int id)
         {
             return await _connection.Table<Autor>().Where(x => x.Id == id).FirstOrDefaultAsync();

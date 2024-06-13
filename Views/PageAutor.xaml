@@ -14,7 +14,7 @@
              VerticalOptions="CenterAndExpand"
              x:Name="FotoImage"/>
 
-        <Button Text="Tomar Foto" Margin="20,0,20,0" x:Name="BtnFoto" Clicked="BtnFoto_Clicked"></Button>
+        <Button Text="Tomar Foto" Margin="20,0,20,0" BackgroundColor="White" BorderColor="Black" TextColor="Black" x:Name="BtnFoto" Clicked="BtnFoto_Clicked"></Button>
 
         <Label 
             Text="Nombres"
@@ -40,10 +40,10 @@
             Margin="20,5,20,5"
             >
         </Picker>
-        <Button x:Name="BtnAgregarPais" Margin="20,0,20,5" Clicked="BtnAgregarPais_Clicked" WidthRequest="50" Text="+"/>
+        <Button x:Name="BtnAgregarPais" Margin="20,0,20,5" Background="DeepSkyBlue" TextColor="Black" Clicked="BtnAgregarPais_Clicked" WidthRequest="50" Text="+"/>
         
         
         
-        <Button x:Name="BtnAceptar" Margin="20,0,20,0" Text="Aceptar" Background="BlueViolet" TextColor="White" Clicked="BtnAceptar_Clicked"/>
+        <Button x:Name="BtnAceptar" Margin="20,0,20,0" Text="Aceptar" Background="LightGreen" TextColor="Black" Clicked="BtnAceptar_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>
